@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #333; */
+    padding: 20px;
+    width: 100%;
+}
+
+.logo{
+    /* display: flex; */
+    font-size: 24px;
+    font-weight: bold;
+    color: #0c0c0c;
+}
+
+.menu{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.menu li a{
+    text-decoration:none;
+    color:black;
+}
+
+.right-section{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.username{
+    background:#cdeff5;
+    font-weight: bold;
+    padding:10px 20px;
+    border-radius:25px;
+}
+
+.hamburger{
+    display:none;
+    font-size:22px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    position:relative;
+}
+
+/* Mobile Menu */
+.mobile-menu{
+    position:absolute;
+    top:60px;
+    right:0;
+    width:200px;
+    height:100vh;
+    background:black;
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.mobile-menu a{
+    color:white;
+    text-decoration:none;
+    margin:15px 0;
+    font-size:18px;
+}
+
+.hamburger:focus .mobile-menu{
+    display:flex;
+}
+
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:140px;
+    height:90vh;
+}
+
+.hero-left{
+    width:50%;
+}
+
+.hero-left h1{
+    color:gray;
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero-left span{
+    color:#1da8c5;
+}
+
+.hero-left button{
+    font-size: 20px;
+    margin-top:20px;
+    padding:14px 25px;
+    background:#1da8c5;
+    color:white;
+    border:none;
+    border-radius:25px;
+    cursor: pointer;
+}
+
+.hero-left button:hover{
+    background-color: rgb(117, 135, 143);
+}
+
+.hero-right{
+    width:50%;
+    text-align:center;
+}
+
+.hero-right img{
+    width:550px;
+}
+
+
+@media(max-width:600px){
+
+    .menu{
+        display:none;
+    }
+
+    .hamburger{
+        display:block;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        height:auto;
+    }
+
+    .hero-left, .hero-right{
+        width:100%;
+    }
+
+    .hero-right img{
+        width:200px;
+        margin-top:20px;
+    }
+}
